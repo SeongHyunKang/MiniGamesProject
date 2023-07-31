@@ -198,6 +198,7 @@ MonoBehaviour:
   - tetromino: 6
     tile: {fileID: 11400000, guid: 6cc1d1da4f07052418a125dfae64e9a6, type: 2}
   spawnPosition: {x: -1, y: 8, z: 0}
+  boardSize: {x: 10, y: 20}
 --- !u!114 &167683156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,6 +211,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cba206f69aafd66489fe4043cd2cc7be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stepDelay: 1
+  lockDelay: 0.5
 --- !u!1 &865542044
 GameObject:
   m_ObjectHideFlags: 0
