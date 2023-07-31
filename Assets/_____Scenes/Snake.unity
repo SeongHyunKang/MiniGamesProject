@@ -268,7 +268,7 @@ GameObject:
   - component: {fileID: 618995785}
   m_Layer: 0
   m_Name: Snake
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -484,7 +484,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 46, y: 22}
+  m_Size: {x: 45, y: 21}
   m_EdgeRadius: 0
 --- !u!4 &749806530
 Transform:
@@ -1161,3 +1161,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7956279ebac5c724d87101e88b629f9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gridArea: {fileID: 749806529}
