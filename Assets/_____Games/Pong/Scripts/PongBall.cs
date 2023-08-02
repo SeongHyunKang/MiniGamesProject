@@ -23,4 +23,9 @@ public class PongBall : MonoBehaviour
         Vector2 direction = new Vector2(x, y);
         rb.AddForce(direction * this.speed);
     }
+
+    public void AddForce(Vector2 force)
+    {
+        rb.AddForce(force);
+    }
 }
