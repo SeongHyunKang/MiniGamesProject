@@ -385,7 +385,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee77a1172c4ff7b4da26e0128cbda770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bounceStrength: 5
+  bounceStrength: 15
 --- !u!1 &505011339
 GameObject:
   m_ObjectHideFlags: 0
@@ -754,7 +754,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee77a1172c4ff7b4da26e0128cbda770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bounceStrength: 5
+  bounceStrength: 15
 --- !u!1 &682606792
 GameObject:
   m_ObjectHideFlags: 0
@@ -1332,6 +1332,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ball: {fileID: 822701768}
+  playerPaddle: {fileID: 304381905}
+  computerPaddle: {fileID: 505011344}
+  playerScoreText: {fileID: 682606794}
+  computerScoreText: {fileID: 1626050185}
 --- !u!4 &885405490
 Transform:
   m_ObjectHideFlags: 0
