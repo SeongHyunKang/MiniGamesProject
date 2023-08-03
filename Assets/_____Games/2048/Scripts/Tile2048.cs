@@ -8,6 +8,7 @@ public class Tile2048 : MonoBehaviour
     public TileState state { get; private set; }
     public TileCell cell{ get; private set; }
     public int number { get; private set; }
+    public bool islocked { get; set; }
 
     private Image background;
     private TextMeshProUGUI text;
@@ -51,10 +52,23 @@ public class Tile2048 : MonoBehaviour
         this.cell = cell;
         this.cell.tile = this;
 
-        StartCoroutine(AnimateTile(cell.transform.position)); 
+        StartCoroutine(AnimateTile(cell.transform.position, false)); 
     }
 
-    private IEnumerator AnimateTile(Vector3 to)
+    public void Merge(TileCell cell)
+    {
+        if (this.cell != null)
+        {
+            this.cell.tile = null;
+        }
+
+        this.cell = null;
+        cell.tile.islocked = true;
+
+        StartCoroutine(AnimateTile(cell.transform.position, true));
+    }
+
+    private IEnumerator AnimateTile(Vector3 to, bool isMerging)
     {
         float elapsed = 0f;
         float duration = 0.1f;
@@ -69,5 +83,10 @@ public class Tile2048 : MonoBehaviour
         }
 
         transform.position = to;
+
+        if (isMerging)
+        {
+            Destroy(gameObject);
+        }
     }
 }
