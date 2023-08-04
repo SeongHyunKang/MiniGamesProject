@@ -52,4 +52,16 @@ public class fBirdPlayer : MonoBehaviour
 
         spriteRenderer.sprite = sprites[spriteIndex];
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Obstacle")
+        {
+            FindObjectOfType<fBirdManager>().GameOver();
+        }
+        else if (other.gameObject.tag == "Score")
+        {
+            FindObjectOfType<fBirdManager>().IncreaseScore();
+        }
+    }
 }
