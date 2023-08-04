@@ -6,7 +6,7 @@ public class fBirdManager : MonoBehaviour
 
     public void GameOver()
     {
-        Debug.Log("GameOver");
+
     }
 
     public void IncreaseScore()

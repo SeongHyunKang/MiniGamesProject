@@ -59,7 +59,7 @@ public class fBirdPlayer : MonoBehaviour
         {
             FindObjectOfType<fBirdManager>().GameOver();
         }
-        else if (other.gameObject.tag == "Score")
+        else if (other.gameObject.tag == "Scoring")
         {
             FindObjectOfType<fBirdManager>().IncreaseScore();
         }
