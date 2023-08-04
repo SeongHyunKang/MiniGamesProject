@@ -183,8 +183,8 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 3
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -227,6 +227,7 @@ GameObject:
   - component: {fileID: 1245075447}
   - component: {fileID: 1245075446}
   - component: {fileID: 1245075445}
+  - component: {fileID: 1245075449}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -363,3 +364,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1245075449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245075444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4d896f16d48d0941b2238f1b431f717, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: -1478153680, guid: ce8c32ae396ec7043ae79f1119100b12, type: 3}
+  - {fileID: -490332251, guid: ce8c32ae396ec7043ae79f1119100b12, type: 3}
+  - {fileID: 74661500, guid: ce8c32ae396ec7043ae79f1119100b12, type: 3}
+  - {fileID: 813984440, guid: ce8c32ae396ec7043ae79f1119100b12, type: 3}
+  gravity: -9.81
+  strength: 5
