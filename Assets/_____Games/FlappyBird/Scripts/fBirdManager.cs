@@ -32,7 +32,7 @@ public class fBirdManager : MonoBehaviour
 
         for (int i = 0; i < pipes.Length; i++)
         {
-            Destroy(pipes[i].gameObject);
+            Destroy(pipes[i].gameObject); 
         }
     }
 
