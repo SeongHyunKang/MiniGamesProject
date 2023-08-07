@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class AstroidsPlayer : MonoBehaviour
+public class AsteroidsPlayer : MonoBehaviour
 {
     public float thrustSpeed;
     public float turnSpeed;
