@@ -4,6 +4,7 @@ public class AstroidsPlayer : MonoBehaviour
 {
     public float thrustSpeed;
     public float turnSpeed;
+    public Bullet bulletPrefab;
 
     private Rigidbody2D rb;
     private bool isThrusting;
@@ -30,6 +31,11 @@ public class AstroidsPlayer : MonoBehaviour
         {
             turnDirection = 0f;
         }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            this.Shoot();
+        }
     }
 
     private void FixedUpdate()
@@ -43,5 +49,11 @@ public class AstroidsPlayer : MonoBehaviour
         {
             rb.AddTorque(turnDirection * this.turnSpeed);
         }
+    }
+
+    private void Shoot()
+    {
+        Bullet bullet = Instantiate(this.bulletPrefab, this.transform.position, this.transform.rotation);
+        bullet.Project(this.transform.up);
     }
 }
