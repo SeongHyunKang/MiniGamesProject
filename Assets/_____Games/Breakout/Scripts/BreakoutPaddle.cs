@@ -33,5 +33,5 @@ public class BreakoutPaddle : MonoBehaviour
         {
             this.rb.AddForce(this.direction * this.speed);
         }
-    }
+    } 
 }
