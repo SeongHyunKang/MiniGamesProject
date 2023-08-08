@@ -13,6 +13,19 @@ public class AsteroidsGM : MonoBehaviour
     {
         this.explosion.transform.position = asteroid.transform.position;
         this.explosion.Play();
+
+        if (asteroid.size < 0.75f)
+        {
+            this.score += 100;
+        }
+        else if(asteroid.size < 1.15f)
+        {
+            this.score += 50;
+        }
+        else
+        {
+            this.score += 25;
+        }
     }
 
     public void PlayerDied()
