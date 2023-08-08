@@ -31,4 +31,9 @@ public class BreakoutGameManager : MonoBehaviour
 
         SceneManager.LoadScene("Level" + level);
     }
+
+    public void Hit(Bricks bricks)
+    {
+        this.score += bricks.points;
+    }
 }
