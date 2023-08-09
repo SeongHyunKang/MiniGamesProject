@@ -12,7 +12,7 @@ public class BreakoutBall : MonoBehaviour
 
     private void Start()
     {
-        Invoke(nameof(SetRandomTrajectory), 1f);
+        ResetBall();
     }
 
     private void SetRandomTrajectory()
@@ -22,5 +22,13 @@ public class BreakoutBall : MonoBehaviour
         force.y = -1f;
 
         this.rb.AddForce(force.normalized * this.speed);
+    }
+
+    public void ResetBall()
+    {
+        this.transform.position = Vector2.zero;
+        this.rb.velocity = Vector2.zero;
+
+        Invoke(nameof(SetRandomTrajectory), 1f);
     }
 }

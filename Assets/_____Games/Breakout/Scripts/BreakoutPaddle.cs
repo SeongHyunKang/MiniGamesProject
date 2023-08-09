@@ -10,7 +10,7 @@ public class BreakoutPaddle : MonoBehaviour
     private void Awake()
     {
         this.rb = GetComponent<Rigidbody2D>();
-    }
+    }    
 
     private void Update()
     {
@@ -55,5 +55,11 @@ public class BreakoutPaddle : MonoBehaviour
             Quaternion rotation = Quaternion.AngleAxis(newAngle, Vector3.forward);
             ball.rb.velocity = rotation * Vector2.up * ball.rb.velocity.magnitude;
         }
+    }
+
+    public void ResetPaddle()
+    {
+        this.transform.position = new Vector2(0f, this.transform.position.y);
+        this.rb.velocity = Vector2.zero;
     }
 }

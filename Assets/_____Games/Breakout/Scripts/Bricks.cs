@@ -15,11 +15,7 @@ public class Bricks : MonoBehaviour
 
     private void Start()
     {
-        if (!this.unbreakable)
-        {
-            this.health = this.states.Length;
-            this.spriteRenderer.sprite = this.states[this.health - 1];
-        }
+        ResetBrick();
     }
 
     private void Hit()
@@ -48,6 +44,17 @@ public class Bricks : MonoBehaviour
         if (collision.gameObject.name == "Ball")
         {
             Hit();
+        }
+    }
+
+    public void ResetBrick()
+    {
+        this.gameObject.SetActive(true);
+
+        if (!this.unbreakable)
+        {
+            this.health = this.states.Length;
+            this.spriteRenderer.sprite = this.states[this.health - 1];
         }
     }
 }
